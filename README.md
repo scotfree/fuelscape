@@ -1,14 +1,45 @@
 # fuelscape
-Tool to assess biochar production as part of wildfire fuels reduction projects (Climatebase Fellowship Capstone project)
+A web-based tool to assess biochar production as part of wildfire fuels reduction projects (Climatebase Fellowship Capstone project).
 
-* *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular, can bio-char production be used as a way to lower costs.
+* *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular to estimate whether bio-char production can be used as a way to lower costs.
 
 * *Secondary:* Platform for non-specialists to craft fuel reduction plans, generate needed documentation for funding and regulatory documents, and track progress and outcomes over time.
 
-* *Teritary:* a Dara narrative (notebook) walking non-specialists through the process.
+* *Teritary:* a "data narrative" (notebook) walking non-specialists through the process.
 
 
 ## Big Questions
+
+### How important is geometry?
+I want to model the fuel reduction treatment explicitly, with fuel distributed geographically and explicit treatment points. I must admit however that partly that just SOUNDS REALLY FUN. I want to path workers and trucks across terrain and have placement of kilns relative to fuel sources matter. That doesn't mean it's very meaningful though.
+
+It may just be that the various rankings and efficacies of treatment methods is realtively constant and the choices are just made based on various availabilities. Even in that case though, it might be useful to model explicitly to get cost estimats for Goal 2.
+
+So: How much does the geospatial detail of the treatment plan and its context impact the options?
+
+Guessed parameters:
+* scale - if we're clearing a whole forest, the details may not matter
+* fuel type - some forms of wood may be more costly to move
+* seasonality - during less safe seasons, there may be impacts on number/placement of burn sites
+* treatment method - for a gang of people with hand tools doing chop-and-scatter, it may not matter much how the fuel is layed out.
+
+### Is selling produced biochar on carbon markets a thing?
+It's the idea which triggered some of this but still largely unquantified! If we produce X amount of biochar how much budget does that translate to?
+
+Obviously there are a lot of variables we need to know to answer this, but let's find out what they are and start estimating! Let's assume the cost of biochar production is handled elsewhere, since (we think) that's very dependent on the treatment chosen. 
+
+Guessed Parameters:
+* state of carbon market (is this a simple price per ton or what?)
+* logistics overhead: do we pay to get the biochar somewhere - on a truck, in the soil, whatever
+* quantity and regularity of production
+* grade?
+
+### What is the input?
+Can we assume communities wanting to do fuel reduction come with geospatial data about the fuel locations and context?
+Probably not.
+So, do they draw it in our app? 
+Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson then display back to them so they can edit and tune it using web based map tools? I mean: yes. That sounds very cool.
+
 
 ## Initial Data and Models
 
