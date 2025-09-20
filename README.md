@@ -41,6 +41,8 @@ So, do they draw it in our app?
 Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson then display back to them so they can edit and tune it using web based map tools? I mean: yes. That sounds very cool.
 
 
+
+
 ## Initial Data and Models
 
 | Treatment (examples)                                |   Typical scale / output |        Cost (per acre) | Staff required | Expertise required |     Equipment required | Seasons available | Firefighter supervision needed? | Appropriate land types                        |                    Carbon impact (relative) | **Biochar Potential**                                    | Notes                                                     |
@@ -134,6 +136,11 @@ It would be natural in some ways to seek startup funding and create a commercial
 ## Plan
 
 ### Fellowship
+* Week 2: approach and team
+* Week 4: interviews and PoC model
+* Week 6: parameters and candidate projects
+* Week 8: web app, demo
+  
 
 ### Post-Fellowship
 
