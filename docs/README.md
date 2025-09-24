@@ -1,5 +1,6 @@
 # fuelscape
-A web-based tool to assess biochar production as part of wildfire fuels reduction projects (Climatebase Fellowship Capstone project).
+(Climatebase Fellowship Capstone project)
+A web-based tool to assess wildfire fuels reduction projects  - in particular, biochar production as part of
 
 * *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular to estimate whether bio-char production can be used as a way to lower costs.
 
@@ -9,6 +10,16 @@ A web-based tool to assess biochar production as part of wildfire fuels reductio
 
 
 ## Big Questions
+
+### Current best practices for modeling fuel removal projects?
+Duh - what else is out there already and can/should we just use that?
+
+#### Requirements
+* open source free software
+* able to incorprate/ignore  parameters in catalog
+* output as numbers and ideally richly formatted text/document
+
+
 
 ### How important is geometry?
 I want to model the fuel reduction treatment explicitly, with fuel distributed geographically and explicit treatment points. I must admit however that partly that just SOUNDS REALLY FUN. I want to path workers and trucks across terrain and have placement of kilns relative to fuel sources matter. That doesn't mean it's very meaningful though.
@@ -63,6 +74,42 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 
 
 ## Initial Data and Models
+
+### Simple (non-geospatial) Parameter Catalog
+What are the basic parameters we need values for to build a "spreadsheet" model?
+Some of these have to do with where a project might take place - let's assume that is external for now. That is, assuming a project will take place at a particular place and time, what do we need to assess very basic outputs like cost, carbon, etc. So we won't include:
+
+#### Selection Criteria
+* Typical scale / output 
+* Seasons available
+* Appropriate land types
+
+#### Project Parameters - baseline daily cost
+
+* project managers
+* Expertise/Specialists required
+ * firefighter overwatch
+ * foresters
+ * equipment operators
+ * biologists
+* Equipment required
+ * fuel transportation
+ * towables
+ * deployment vehicls
+ * hand gear
+
+
+#### Implementaion Parameters - detail impacted, per acre
+* Cost
+ * non-specialist staff
+ * haulage
+ * firesafe clearing and prep
+* net carbon
+* biochar generation
+* fuel removal
+
+                                    
+
 
 | Treatment (examples)                                |   Typical scale / output |        Cost (per acre) | Staff required | Expertise required |     Equipment required | Seasons available | Firefighter supervision needed? | Appropriate land types                        |                    Carbon impact (relative) | **Biochar Potential**                                    | Notes                                                     |
 | --------------------------------------------------- | -----------------------: | ---------------------: | -------------: | -----------------: | ---------------------: | ----------------: | ------------------------------: | --------------------------------------------- | ------------------------------------------: | -------------------------------------------------------- | --------------------------------------------------------- |
