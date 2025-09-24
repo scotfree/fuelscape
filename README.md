@@ -35,12 +35,31 @@ Guessed Parameters:
 * grade?
 
 ### What is the input?
+
+There are at least two parts to this: we need to know where the fuels are and then how the project intends to remove them.
+
+#### Where does fuel data come from?
+Ideally, customers come with existing data about the fuels distribution in their project area.
+When this is not the case, or the data isn't rich enough, we have a few options.
+
+* public fuels data - there may be public data available
+ * availability - is data available at all?
+ * scale/accuracy - is data too coarse grained or inaccurate or dated to be useful, or used unprocessed.
+* photogrammetry and lidar can be used to estimates geographical distribution of fuels. Getting accurate data on things like ladder fuels and tree hights in addition to species or type is possible, but depends on input data and depth of analysis we're willing to apply.
+* drone video and analysis can provide remarkably detailed models of individual tree, species, and carbon. This can be generated with commodity drones but requires fairly sophisticated analysis - generally gaussian splatting these days.
+
+
+#### Where does treatment/project data come from?
 Can we assume communities wanting to do fuel reduction come with geospatial data about the fuel locations and context?
 Probably not.
 So, do they draw it in our app? 
 Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson then display back to them so they can edit and tune it using web based map tools? I mean: yes. That sounds very cool.
 
-
+* upload and process customer provided plan data
+* draw directly as polygon geometries in app
+* apply LLM prompt -> SQL -> geometries
+* automagically approximate
+* suggest plans based on various criterion - likely not only cost
 
 
 ## Initial Data and Models
@@ -72,7 +91,10 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 
 ## Needed Contacts
 
-## Funding Models
+* fuel reduction planners/implementors
+* carbon markets startup/api/modeller
+* biochar kiln producers and practitioners
+* fuel reduction grant experts
 
 ## Architecture
 * cloud service - serverless
