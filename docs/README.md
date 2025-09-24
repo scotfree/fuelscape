@@ -75,41 +75,8 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 
 ## Initial Data and Models
 
-### Simple (non-geospatial) Parameter Catalog
-What are the basic parameters we need values for to build a "spreadsheet" model?
-Some of these have to do with where a project might take place - let's assume that is external for now. That is, assuming a project will take place at a particular place and time, what do we need to assess very basic outputs like cost, carbon, etc. So we won't include:
-
-#### Selection Criteria
-* Typical scale / output 
-* Seasons available
-* Appropriate land types
-
-#### Project Parameters - baseline daily cost
-
-* project managers
-* Expertise/Specialists required
- * firefighter overwatch
- * foresters
- * equipment operators
- * biologists
-* Equipment required
- * fuel transportation
- * towables
- * deployment vehicls
- * hand gear
-
-
-#### Implementaion Parameters - detail impacted, per acre
-* Cost
- * non-specialist staff
- * haulage
- * firesafe clearing and prep
-* net carbon
-* biochar generation
-* fuel removal
-
-                                    
-
+### Treaments
+Here are some qualitative sketches of different treatments to be modeled.
 
 | Treatment (examples)                                |   Typical scale / output |        Cost (per acre) | Staff required | Expertise required |     Equipment required | Seasons available | Firefighter supervision needed? | Appropriate land types                        |                    Carbon impact (relative) | **Biochar Potential**                                    | Notes                                                     |
 | --------------------------------------------------- | -----------------------: | ---------------------: | -------------: | -----------------: | ---------------------: | ----------------: | ------------------------------: | --------------------------------------------- | ------------------------------------------: | -------------------------------------------------------- | --------------------------------------------------------- |
@@ -134,6 +101,63 @@ Some of these have to do with where a project might take place - let's assume th
 | Herbicide treatment                                 |                 Targeted |             Low–Medium |            Low |             Medium |             Spray gear |          Seasonal |                              No | Targeted invasives                            |                                    Variable | **None**                                                 | Biomass usually left in place to decompose.               |
 | Wildfire fuelbreak construction                     |      Landscape corridors |                   High |           High |               High |    Dozers, masticators |   Off fire season |       Yes (if near fire season) | Strategic corridors                           |                                    Variable | **Low**                                                  | Biomass may be burned or mulched; rarely charred.         |
 | Merchantable thinning / selective harvest           |             Timber-scale | Often revenue-positive |           High |               High |        Logging systems |          Seasonal |                              No | Productive forests                            |                             Potentially low | **Medium** (slash can be charred)                        | Depends if slash recovery for char is prioritized.        |
+
+
+
+
+### Models
+#### Simple (non-geospatial) Parameter Catalog
+What are the basic parameters we need values for to build a "spreadsheet" model?
+Some of these have to do with where a project might take place - let's assume that is external for now. That is, assuming a project will take place at a particular place and time, what do we need to assess very basic outputs like cost, carbon, etc. So we won't include:
+
+##### Selection Criteria
+* Typical scale / output 
+* Seasons available
+* Appropriate land types
+
+##### Project Parameters - baseline daily cost
+
+* total acres
+* staff size
+* project managers
+* Expertise/Specialists required
+ * firefighter overwatch
+ * foresters
+ * equipment operators
+ * biologists
+* Equipment required
+ * fuel transportation
+ * towables
+ * deployment vehicls
+ * hand gear
+
+
+##### Implementaion Parameters - detail impacted, per acre
+* acres treated/staff/day
+* Cost
+ * non-specialist staff
+ * haulage
+ * firesafe clearing and prep
+* net carbon
+* biochar generation
+* fuel removal
+
+
+#### A Really Bad Model
+Let's make a ton of horrible assumptions and invalid oversimplifications then use them in s really bad model!
+
+```
+inputs = [acres, staff]
+days = ceiling( acres / (staff * speed) )
+daily_cost = crew + staff + equipment + transportation
+
+```
+Want
+* hauling impact even if not geographic - low density vs high density treatment areas
+* transportation scaled to actual produced waste.
+* So fuel removed becomes waste at some ratio
+
+
 
 
 ## Needed Contacts
