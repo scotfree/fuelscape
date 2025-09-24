@@ -237,3 +237,17 @@ It would be natural in some ways to seek startup funding and create a commercial
 
 ### Post-Fellowship
 
+## Reading and Links
+### Policy and Overview
+* https://permitsonoma.org/hazfuelsreduction
+* https://research.fs.usda.gov/treesearch/57676
+* https://www.doi.gov/wildlandfire/fuels
+
+### Quantitative Modeling
+* https://www.mdpi.com/2571-6255/6/3/104  A Quantitative Analysis of Fuel Break Effectiveness Drivers in Southern California National Forests
+* https://fireecology.springeropen.com/articles/10.1186/s42408-022-00157-0 A framework for quantifying forest wildfire hazard and fuel treatment effectiveness from stands to landscapes
+* https://research.fs.usda.gov/treesearch/57676 Wildfire fuel reduction cost analysis: Statistical modeling and user model for fire specialists in California
+* https://www.rff.org/news/press-releases/new-study-identifies-costs-of-wildfire-fuel-treatment-in-california/#:~:text=Treating%20areas%20with%20high%20wildfire,and%20San%20Bernardino%20mountain%20ranges. New Study Identifies Costs of Wildfire Fuel Treatment in California
+* https://www.rff.org/publications/working-papers/the-costs-of-achieving-forest-resilience-in-california/  The Costs of Achieving Forest Resilience in California
+  
+
