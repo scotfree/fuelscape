@@ -1,6 +1,4 @@
-# fuelscape
-(Climatebase Fellowship Capstone project)
-A web-based tool to assess wildfire fuels reduction projects  - in particular, biochar production as part of
+## Climatebase Fellowship Capstone project:  A web-based tool to assess wildfire fuels reduction projects  - in particular, biochar production treatments.
 
 * *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular to estimate whether bio-char production can be used as a way to lower costs.
 
@@ -8,91 +6,32 @@ A web-based tool to assess wildfire fuels reduction projects  - in particular, b
 
 * *Tertiary:* a "data narrative" (notebook) walking non-specialists through the process.
 
-## Overview
+# Overview
 
 Wildfire-threatened communities across the West know they need to reduce fuels - but turning this knowledge into plans and action is another story. Projects are expensive, logistics are messy, and navigating grants can be overwhelming for small fire safe councils and local volunteer departments. Meanwhile, every year of delay means more fuel in the forest, higher wildfire risk, and more carbon released into the atmosphere when fires inevitably burn.Even when funding is available - like existing RFPs for biochar kilns or proposals for “lending libraries” - local groups often lack the tools to explore these options. 
 
 Our goal here is to give communities a way to model wildfire fuel reduction projects and explore whether biochar production could strengthen them. We’ll do this by providing a simple, geospatial web platform designed for local needs and fully compatible with tools they may already use.Within that platform, users can model different treatment approaches - taking into account geography, ecology, staffing, implementation rules, and importantly: budget. The results will be easy to export in formats they can use for grant applications, regulatory filings, and project planning.Finally, we’ll model how integrating biochar production could offset costs, simplify logistics, and unlock new sources of funding through carbon markets - turning what is now a daunting idea into a clear, actionable opportunity.
 
+    
+## Use Cases
+* Local VFD would like to explore adding bio-char generation to their existing process for fuel reduction in their local area.
+* Community would like to put together a fuel reduction project, but don’t know the steps or have much budget to fund the work, let alone the preparation.
+* Federate multiple projects
+* track progress and outcomes over time
 
-## Big Questions
-
-### Current best practices for modeling fuel removal projects?
-What else is out there already and can/should we just use that?
-
-Thus far there doesn't seem to be a widely used general approach here. There are a few papers suggesting them or summarizing results. IN particular, a [Forest Service](https://www.fs.usda.gov/psw/publications/documents/psw_gtr261en/psw_gtr261_085.pdf) mentions a "Spreadsheet Model" for fuel reduction cost estimation - however, I have not yet been able to find a version of it. 
-
-The standard approaches seem to largely be simple models run to simple area based approaches. There's a quick ChatGPT take on this below, but essentially they mostly set a per-acre cost for broad treatment types, then modify this with large location features: North vs South half of California, for example - or critically, whether the treatment area is in the Wildland Urban Interface (WUI). These are great places to start and we need to agree with these models or justify where we differ. 
-
-They do seem to lack some general properties which may justify the need for the Fuelscape tool:
-* don't address carbon impacts in general - this may be useful for certain grant and funding structures, beyond local desire for "green" projects
-* don't express biochar production specifically - impact not only on carbon but other modeled aspects: cost, risk, staff, etc.
-* take an existing plan and predict cost - not a way to make a plan and help get it deployed
-
-These "product" observations lead to some "technical" preferences:
-
-#### Requirements
-* open source free software
-* able to incorprate/ignore  parameters in catalog
-* output as numbers and ideally richly formatted text/document
+## Product
+* Platform: web app
+* Input: Potential Wildfire Fuel Reduction (WFR) Plan (treatment location, areas, methods, staff/timeline)
+* Model: biomass extracted -> biomass processed -> biochar -> cost
+* Outputs:
+ * core metrics: cost, net carbon
+ * artifacts: grant content, spreadsheet
+ * planning hints - schedule orchestration, equipment, etc
 
 
+# Data and Models
 
-### How important is geometry?
-I want to model the fuel reduction treatment explicitly, with fuel distributed geographically and explicit treatment points. I must admit however that partly that just SOUNDS REALLY FUN. I want to path workers and trucks across terrain and have placement of kilns relative to fuel sources matter. That doesn't mean it's very meaningful though.
-
-It may just be that the various rankings and efficacies of treatment methods is realtively constant and the choices are just made based on various availabilities. Even in that case though, it might be useful to model explicitly to get cost estimats for Goal 2.
-
-So: How much does the geospatial detail of the treatment plan and its context impact the options?
-
-Guessed parameters:
-* scale - if we're clearing a whole forest, the details may not matter
-* fuel type - some forms of wood may be more costly to move
-* seasonality - during less safe seasons, there may be impacts on number/placement of burn sites
-* treatment method - for a gang of people with hand tools doing chop-and-scatter, it may not matter much how the fuel is layed out.
-
-### Is selling produced biochar on carbon markets a thing?
-It's the idea which triggered some of this but still largely unquantified! If we produce X amount of biochar how much budget does that translate to?
-
-Obviously there are a lot of variables we need to know to answer this, but let's find out what they are and start estimating! Let's assume the cost of biochar production is handled elsewhere, since (we think) that's very dependent on the treatment chosen. 
-
-Guessed Parameters:
-* state of carbon market (is this a simple price per ton or what?)
-* logistics overhead: do we pay to get the biochar somewhere - on a truck, in the soil, whatever
-* quantity and regularity of production
-* grade?
-
-### What is the input?
-
-There are at least two parts to this: we need to know where the fuels are and then how the project intends to remove them.
-
-#### Where does fuel data come from?
-Ideally, customers come with existing data about the fuels distribution in their project area.
-When this is not the case, or the data isn't rich enough, we have a few options.
-
-* public fuels data - there may be public data available
- * availability - is data available at all?
- * scale/accuracy - is data too coarse grained or inaccurate or dated to be useful, or used unprocessed.
-* photogrammetry and lidar can be used to estimates geographical distribution of fuels. Getting accurate data on things like ladder fuels and tree hights in addition to species or type is possible, but depends on input data and depth of analysis we're willing to apply.
-* drone video and analysis can provide remarkably detailed models of individual tree, species, and carbon. This can be generated with commodity drones but requires fairly sophisticated analysis - generally gaussian splatting these days.
-
-
-#### Where does treatment/project data come from?
-Can we assume communities wanting to do fuel reduction come with geospatial data about the fuel locations and context?
-Probably not.
-So, do they draw it in our app? 
-Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson then display back to them so they can edit and tune it using web based map tools? I mean: yes. That sounds very cool.
-
-* upload and process customer provided plan data
-* draw directly as polygon geometries in app
-* apply LLM prompt -> SQL -> geometries
-* automagically approximate
-* suggest plans based on various criterion - likely not only cost
-
-
-## Initial Data and Models
-
-### Treaments
+## Treaments
 Here are some qualitative sketches of different treatments to be modeled. We've made wild attempts to quantify these and put them in more easily used (JSON) format [here](../parameters.json). Refining these numerical values is likely a core part of the work to be done - but note that we may care much more about relative than absolute values. Our core goal is to help rank different treatments, not perfectly estimate their costs.
 
 | Treatment (examples)                                |   Typical scale / output |        Cost (per acre) | Staff required | Expertise required |     Equipment required | Seasons available | Firefighter supervision needed? | Appropriate land types                        |                    Carbon impact (relative) | **Biochar Potential**                                    | Notes                                                     |
@@ -122,17 +61,17 @@ Here are some qualitative sketches of different treatments to be modeled. We've 
 
 
 
-### Models
-#### Simple (non-geospatial) Parameter Catalog
+## Models
+### Simple (non-geospatial) Parameter Catalog
 What are the basic parameters we need values for to build a "spreadsheet" model?
 Some of these have to do with where a project might take place - let's assume that is external for now. That is, assuming a project will take place at a particular place and time, what do we need to assess very basic outputs like cost, carbon, etc. So we won't include:
 
-##### Selection Criteria
+#### Selection Criteria
 * Typical scale / output 
 * Seasons available
 * Appropriate land types
 
-##### Project Parameters - baseline daily cost
+#### Project Parameters - baseline daily cost
 
 * total acres
 * staff size
@@ -149,7 +88,7 @@ Some of these have to do with where a project might take place - let's assume th
  * hand gear
 
 
-##### Implementaion Parameters - detail impacted, per acre
+#### Implementaion Parameters - detail impacted, per acre
 * acres treated/staff/day
 * Cost
  * non-specialist staff
@@ -160,7 +99,7 @@ Some of these have to do with where a project might take place - let's assume th
 * fuel removal
 
 
-#### A Really Bad Model
+### A Really Bad Model
 Let's make a ton of horrible assumptions and invalid oversimplifications then use them in s really bad model!
 
 ```
@@ -176,8 +115,8 @@ Want
 
 
 
-#### ChatGPT's Bad Model
-
+### ChatGPT's Bad Model
+Asking AI for some basic summarization and simple modeling provides another sketch:
 
 ```
 Simple quantitative models for wildfire fuel reduction costs are generally statistical, based on factors like treatment type, location, topography, and project size. The most straightforward approach is using average cost-per-acre data, but more sophisticated models incorporate multiple variables to improve accuracy. [1, 2, 3, 4]  
@@ -254,14 +193,8 @@ AI responses may include mistakes.
 ```
 
 
-## Needed Contacts
 
-* fuel reduction planners/implementors
-* carbon markets startup/api/modeller
-* biochar kiln producers and practitioners
-* fuel reduction grant experts
-
-## Architecture
+# Technical
 * cloud service - serverless
 * cheap slow cloud storage
 * simple universal formats for interoperability
@@ -278,14 +211,12 @@ AI responses may include mistakes.
   * grant proposal components
   * spreadsheet comparing treatments
  
-    
-## Use Cases
-* Local VFD would like to explore adding bio-char generation to their existing process for fuel reduction in their local area.
-* Community would like to put together a fuel reduction project, but don’t know the steps or have much budget to fund the work, let alone the preparation.
-* Federate multiple projects
-* track progress and outcomes over time
-
-## Help Requested
+# Product Ecology
+## Needed Contacts
+* fuel reduction planners/implementors
+* carbon markets startup/api/modeller
+* biochar kiln producers and practitioners
+* fuel reduction grant experts
 * Carbon Markets
 * Biochar Generation and Use
 * Community Engagement
@@ -311,7 +242,8 @@ Even small funding from the community and local organizations would likely be en
 ### SaaS 
 It would be natural in some ways to seek startup funding and create a commercial service, likely with a larger or expanding set of features and use cases. Sliding scale pricing and/or non-profit status can help keep the service available to communities, but allow growth funded by commercial users with budget available.
 
-## Open Questions
+# Open Questions
+## General Product Questions
 * how much of a general planning tool vs bio-char production modeling
 * funding model
 * one off vs ongoing
@@ -319,25 +251,116 @@ It would be natural in some ways to seek startup funding and create a commercial
 * data retention and access control
 * sensitive data
 
+## Big Questions
+### Current best practices for modeling fuel removal projects?
+What else is out there already and can/should we just use that?
 
-## Plan
+Thus far there doesn't seem to be a widely used general approach here. There are a few papers suggesting them or summarizing results. IN particular, a [Forest Service](https://www.fs.usda.gov/psw/publications/documents/psw_gtr261en/psw_gtr261_085.pdf) mentions a "Spreadsheet Model" for fuel reduction cost estimation - however, I have not yet been able to find a version of it. 
 
-### Fellowship
+The standard approaches seem to largely be simple models run to simple area based approaches. There's a quick ChatGPT take on this below, but essentially they mostly set a per-acre cost for broad treatment types, then modify this with large location features: North vs South half of California, for example - or critically, whether the treatment area is in the Wildland Urban Interface (WUI). These are great places to start and we need to agree with these models or justify where we differ. 
+
+They do seem to lack some general properties which may justify the need for the Fuelscape tool:
+* don't address carbon impacts in general - this may be useful for certain grant and funding structures, beyond local desire for "green" projects
+* don't express biochar production specifically - impact not only on carbon but other modeled aspects: cost, risk, staff, etc.
+* take an existing plan and predict cost - not a way to make a plan and help get it deployed
+
+These "product" observations lead to some "technical" preferences:
+
+### Requirements
+* open source free software
+* able to incorprate/ignore  parameters in catalog
+* output as numbers and ideally richly formatted text/document
+
+
+
+### How important is geometry?
+I want to model the fuel reduction treatment explicitly, with fuel distributed geographically and explicit treatment points. I must admit however that partly that just SOUNDS REALLY FUN. I want to path workers and trucks across terrain and have placement of kilns relative to fuel sources matter. That doesn't mean it's very meaningful though.
+
+It may just be that the various rankings and efficacies of treatment methods is realtively constant and the choices are just made based on various availabilities. Even in that case though, it might be useful to model explicitly to get cost estimats for Goal 2.
+
+So: How much does the geospatial detail of the treatment plan and its context impact the options?
+
+Guessed parameters:
+* scale - if we're clearing a whole forest, the details may not matter
+* fuel type - some forms of wood may be more costly to move
+* seasonality - during less safe seasons, there may be impacts on number/placement of burn sites
+* treatment method - for a gang of people with hand tools doing chop-and-scatter, it may not matter much how the fuel is layed out.
+
+### Is selling produced biochar on carbon markets a thing?
+It's the idea which triggered some of this but still largely unquantified! If we produce X amount of biochar how much budget does that translate to?
+
+Obviously there are a lot of variables we need to know to answer this, but let's find out what they are and start estimating! Let's assume the cost of biochar production is handled elsewhere, since (we think) that's very dependent on the treatment chosen. 
+
+Guessed Parameters:
+* state of carbon market (is this a simple price per ton or what?)
+* logistics overhead: do we pay to get the biochar somewhere - on a truck, in the soil, whatever
+* quantity and regularity of production
+* grade?
+
+### What is the input?
+
+There are at least two parts to this: we need to know where the fuels are and then how the project intends to remove them.
+
+#### Where does fuel data come from?
+Ideally, customers come with existing data about the fuels distribution in their project area.
+When this is not the case, or the data isn't rich enough, we have a few options.
+
+* public fuels data - there may be public data available
+ * availability - is data available at all?
+ * scale/accuracy - is data too coarse grained or inaccurate or dated to be useful, or used unprocessed.
+* photogrammetry and lidar can be used to estimates geographical distribution of fuels. Getting accurate data on things like ladder fuels and tree hights in addition to species or type is possible, but depends on input data and depth of analysis we're willing to apply.
+* drone video and analysis can provide remarkably detailed models of individual tree, species, and carbon. This can be generated with commodity drones but requires fairly sophisticated analysis - generally gaussian splatting these days.
+
+
+#### Where does treatment/project data come from?
+Can we assume communities wanting to do fuel reduction come with geospatial data about the fuel locations and context?
+Probably not.
+So, do they draw it in our app? 
+Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson then display back to them so they can edit and tune it using web based map tools? I mean: yes. That sounds very cool.
+
+* upload and process customer provided plan data
+* draw directly as polygon geometries in app
+* apply LLM prompt -> SQL -> geometries
+* automagically approximate
+* suggest plans based on various criterion - likely not only cost
+
+
+# Plan
+
+## Fellowship
 * Week 2: approach and team
+ * summarize competition
+ *  find interested people with relevant experience/skills
+ *  stretch: horrible draft model
 * Week 4: interviews and PoC model
+ * interview - WFR
+ * interview - biochar
+ * interview - carbon market
+ * basic non-geometry model
+ * identify potential user(s)
 * Week 6: parameters and candidate projects
+ * compare to published results, models, data
+ * import existing WFR plan (spreadsheet and/or geoJSON)
+ * improved model
+ * basic geometric model
+ * interview - grant funding
+ * interview potential user
 * Week 8: web app, demo
-  
+ * compare geometric to non
+ * create model in app
+ * grant/doc output format 
+ * release open source
 
-### Post-Fellowship
+## Post-Fellowship
+* pursue grants
 
-## Reading and Links
-### Policy and Overview
+# Reading and Links
+## Policy and Overview
 * https://permitsonoma.org/hazfuelsreduction
 * https://research.fs.usda.gov/treesearch/57676
 * https://www.doi.gov/wildlandfire/fuels
 
-### Quantitative Modeling
+## Quantitative Modeling
 * https://www.mdpi.com/2571-6255/6/3/104  A Quantitative Analysis of Fuel Break Effectiveness Drivers in Southern California National Forests
 * https://fireecology.springeropen.com/articles/10.1186/s42408-022-00157-0 A framework for quantifying forest wildfire hazard and fuel treatment effectiveness from stands to landscapes
 * https://research.fs.usda.gov/treesearch/57676 Wildfire fuel reduction cost analysis: Statistical modeling and user model for fire specialists in California
