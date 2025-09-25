@@ -6,13 +6,24 @@ A web-based tool to assess wildfire fuels reduction projects  - in particular, b
 
 * *Secondary:* Platform for non-specialists to craft fuel reduction plans, generate needed documentation for funding and regulatory documents, and track progress and outcomes over time.
 
-* *Teritary:* a "data narrative" (notebook) walking non-specialists through the process.
+* *Tertiary:* a "data narrative" (notebook) walking non-specialists through the process.
 
 
 ## Big Questions
 
 ### Current best practices for modeling fuel removal projects?
-Duh - what else is out there already and can/should we just use that?
+What else is out there already and can/should we just use that?
+
+Thus far there doesn't seem to be a widely used general approach here. There are a few papers suggesting them or summarizing results. IN particular, a [Forest Service](https://www.fs.usda.gov/psw/publications/documents/psw_gtr261en/psw_gtr261_085.pdf) mentions a "Spreadsheet Model" for fuel reduction cost estimation - however, I have not yet been able to find a version of it. 
+
+The standard approaches seem to largely be simple models run to simple area based approaches. There's a quick ChatGPT take on this below, but essentially they mostly set a per-acre cost for broad treatment types, then modify this with large location features: North vs South half of California, for example - or critically, whether the treatment area is in the Wildland Urban Interface (WUI). These are great places to start and we need to agree with these models or justify where we differ. 
+
+They do seem to lack some general properties which may justify the need for the Fuelscape tool:
+* don't address carbon impacts in general - this may be useful for certain grant and funding structures, beyond local desire for "green" projects
+* don't express biochar production specifically - impact not only on carbon but other modeled aspects: cost, risk, staff, etc.
+* take an existing plan and predict cost - not a way to make a plan and help get it deployed
+
+These "product" observations lead to some "technical" preferences:
 
 #### Requirements
 * open source free software
@@ -76,7 +87,7 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 ## Initial Data and Models
 
 ### Treaments
-Here are some qualitative sketches of different treatments to be modeled.
+Here are some qualitative sketches of different treatments to be modeled. We've made wild attempts to quantify these and put them in more easily used (JSON) format [here](../parameters.json). Refining these numerical values is likely a core part of the work to be done - but note that we may care much more about relative than absolute values. Our core goal is to help rank different treatments, not perfectly estimate their costs.
 
 | Treatment (examples)                                |   Typical scale / output |        Cost (per acre) | Staff required | Expertise required |     Equipment required | Seasons available | Firefighter supervision needed? | Appropriate land types                        |                    Carbon impact (relative) | **Biochar Potential**                                    | Notes                                                     |
 | --------------------------------------------------- | -----------------------: | ---------------------: | -------------: | -----------------: | ---------------------: | ----------------: | ------------------------------: | --------------------------------------------- | ------------------------------------------: | -------------------------------------------------------- | --------------------------------------------------------- |
@@ -158,6 +169,83 @@ Want
 * So fuel removed becomes waste at some ratio
 
 
+
+#### ChatGPT's Bad Model
+
+
+```
+Simple quantitative models for wildfire fuel reduction costs are generally statistical, based on factors like treatment type, location, topography, and project size. The most straightforward approach is using average cost-per-acre data, but more sophisticated models incorporate multiple variables to improve accuracy. [1, 2, 3, 4]  
+Cost-per-acre average The simplest model is to use an average cost-per-acre. This can provide a very rough, back-of-the-envelope estimate but does not account for site-specific variability. 
+Formula 
+Where: 
+
+•  = Total estimated project cost 
+•  = Area to be treated in acres 
+•  = Average cost per acre for a specific treatment type [5, 6]  
+
+Example: For a 500-acre project using prescribed fire, if the average cost for that method is $170 per acre, the estimated cost is . [1]  
+Limitations: This model is unreliable because costs can vary significantly based on factors like slope, proximity to development, and fuel type. [7, 8]  
+Regression-based models Regression models account for multiple variables and are used by agencies like the USDA Forest Service to produce more reliable cost estimates. Separate models are often developed for different treatment types, such as prescribed burning and mechanical thinning. [1, 2, 9, 10]  
+Factors included in regression models Factors commonly used in these models include: 
+
+• Treatment type: Prescribed burning vs. mechanical thinning. Prescribed fire is often less expensive per acre. 
+• Project size (acres): Increasing the treated area often results in a lower cost per acre due to economies of scale. 
+• Wildland-Urban Interface (WUI): Costs are often higher in or near the WUI due to more intensive safety precautions and higher labor costs. 
+• Topography: Projects on steep slopes or rugged terrain cost more due to reduced accessibility for machinery. 
+• Proximity to populated areas: Treating land closer to urban areas increases costs due to liability and logistical challenges. 
+• Fuel characteristics: Different fuel types and densities affect the time and resources needed for treatment. [1, 2, 11, 12, 13]  
+
+Formula (generalized) A typical regression model for cost might look like this: 
+
+Where: 
+
+•  = Estimated cost per acre 
+•  = The model's intercept (base cost) 
+•  = Number of acres in the project (can have a negative coefficient due to economies of scale) 
+•  = Indicator variable (1 if project is in WUI, 0 otherwise) 
+•  = Average slope of the project area 
+•  = Average elevation of the project area 
+•  = Error term 
+•  = Regression coefficients that define the effect of each variable on cost [1, 2, 12, 14, 15]  
+
+How it works: 
+
+1. Data collection: The model is built by analyzing historical cost data from past projects, like the Forest Service Activities Tracking System (FACTS). 
+2. Fitting the model: Statistical software uses this data to find the best-fit coefficients ( values) for each variable. 
+3. Prediction: A user enters the characteristics of a new project, and the model calculates the estimated cost per acre. The total cost is found by multiplying this result by the project size. [2, 16]  
+
+Advanced spreadsheet models The US Forest Service and other researchers have developed spreadsheet-based models that use regression equations to provide practical tools for fire managers. For example, the Forest Service has a model that allows users to input up to three treatment types, the geographic region, county, and acres to estimate costs. [2, 5, 14]  
+Factors beyond simple models While the models above capture key quantitative aspects, other qualitative and highly variable factors can impact costs, such as: 
+
+• Permitting and planning costs: Developing burn plans, completing environmental assessments, and obtaining permits can be costly. 
+• Weather dependency: Prescribed burns depend heavily on weather windows, and delays can increase overall project costs. 
+• Site-specific hazards: Difficult access, sensitive habitat, or the presence of specific tree species can add complexity and cost. [17, 18, 19]  
+
+AI responses may include mistakes.
+
+[1] https://www.rff.org/documents/4746/WP_25-03.pdf
+[2] https://www.fs.usda.gov/psw/publications/documents/psw_gtr261en/psw_gtr261_085.pdf
+[3] https://www.swfireconsortium.org/wp-content/uploads/2016/12/Econ_Final_Web-2.pdf
+[4] https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0319787
+[5] https://research.fs.usda.gov/treesearch/57676
+[6] https://www.fs.usda.gov/rm/pubs_journals/2023/rmrs_2023_chang_h001.pdf
+[7] https://www.publish.csiro.au/wf/Fulltext/WF23182
+[8] https://plumassun.org/2025/09/21/unburned/
+[9] https://fireecology.springeropen.com/articles/10.1186/s42408-022-00159-y
+[10] https://www.publish.csiro.au/wf/fulltext/wf14058
+[11] https://agrilife.org/westtexasrangelands/analysis-of-the-cost-and-cost-components-of-conducting-prescribed-fires-in-the-great-plains/
+[12] https://eri.nau.edu/science-flash-january-2023-determining-forest-thinning-operation-costs/
+[13] https://www.sciencedirect.com/science/article/pii/S0378112721007647
+[14] https://research.fs.usda.gov/treesearch/57676
+[15] https://onlinelibrary.wiley.com/doi/10.1002/ldr.5652
+[16] https://www.emerald.com/ecam/article/29/7/2836/34824/Application-of-stacking-ensemble-machine-learning
+[17] https://ucanr.edu/sites/default/files/2020-04/324837.pdf
+[18] https://www.sciencedirect.com/science/article/pii/S2949790624002003
+[19] https://bioone.org/journals/rangeland-ecology-and-management/volume-92/issue-1/j.rama.2023.11.002/Analysis-of-the-Cost-and-Cost-Components-of-Conducting-Prescribed/10.1016/j.rama.2023.11.002.full
+
+
+
+```
 
 
 ## Needed Contacts
