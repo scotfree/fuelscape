@@ -8,6 +8,12 @@ A web-based tool to assess wildfire fuels reduction projects  - in particular, b
 
 * *Tertiary:* a "data narrative" (notebook) walking non-specialists through the process.
 
+## Overview
+
+Wildfire-threatened communities across the West know they need to reduce fuels - but turning this knowledge into plans and action is another story. Projects are expensive, logistics are messy, and navigating grants can be overwhelming for small fire safe councils and local volunteer departments. Meanwhile, every year of delay means more fuel in the forest, higher wildfire risk, and more carbon released into the atmosphere when fires inevitably burn.Even when funding is available - like existing RFPs for biochar kilns or proposals for “lending libraries” - local groups often lack the tools to explore these options. 
+
+Our goal here is to give communities a way to model wildfire fuel reduction projects and explore whether biochar production could strengthen them. We’ll do this by providing a simple, geospatial web platform designed for local needs and fully compatible with tools they may already use.Within that platform, users can model different treatment approaches - taking into account geography, ecology, staffing, implementation rules, and importantly: budget. The results will be easy to export in formats they can use for grant applications, regulatory filings, and project planning.Finally, we’ll model how integrating biochar production could offset costs, simplify logistics, and unlock new sources of funding through carbon markets - turning what is now a daunting idea into a clear, actionable opportunity.
+
 
 ## Big Questions
 
