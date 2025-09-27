@@ -1,6 +1,7 @@
-## Climatebase Fellowship Capstone project:  A web-based tool to assess wildfire fuels reduction projects  - in particular, biochar production treatments.
+# Tool to assess biochar production in community wildfire fuels reduction projects
+*Climatebase Fellowship Capstone project*
 
-* *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular to estimate whether bio-char production can be used as a way to lower costs.
+* *Main*: web based platform to gather geospatial data for a fuel reduction project and compare various ways to handle the carbon removed as fuel. In particular to estimate whether bio-char production can be used as a way to lower costs or increase benefits.
 
 * *Secondary:* Platform for non-specialists to craft fuel reduction plans, generate needed documentation for funding and regulatory documents, and track progress and outcomes over time.
 
@@ -19,14 +20,40 @@ Our goal here is to give communities a way to model wildfire fuel reduction proj
 * Federate multiple projects
 * track progress and outcomes over time
 
-## Product
-* Platform: web app
-* Input: Potential Wildfire Fuel Reduction (WFR) Plan (treatment location, areas, methods, staff/timeline)
-* Model: biomass extracted -> biomass processed -> biochar -> cost
-* Outputs:
- * core metrics: cost, net carbon
- * artifacts: grant content, spreadsheet
- * planning hints - schedule orchestration, equipment, etc
+## Product System
+* *Platform:* web app - interactive maps and upload of geospatial/planning documents
+* *Input:* Potential Wildfire Fuel Reduction (WFR) Plan (treatment location, areas, methods, staff/timeline)
+* *Model:* treatment plan -> biomass extracted -> biomass processed -> (biochar produced) -> cost / impact
+* *Outputs:*
+    * core metrics: cost, net carbon, seasonal and other restrictions
+    * artifacts: grant content, spreadsheet
+    * planning hints - schedule orchestration, equipment, etc
+
+## Needed Conversations / Contributors
+* fuel reduction planners/implementors
+* carbon markets startup/api/modeller
+* biochar production
+* grant writing and funding
+* Community Engagement - local organizations (fire dep'ts, tribes, fire safe councils, RCDs, NGOs, etc)
+* Frontend Engineering - maplibre, fastAPI, sedona/spark, duckdb/pg
+* Geospatial platforms and Modeling (fire and logistics in particular)
+* Cultural fire and TEK
+
+
+## Funding Models
+A critical aspect of this project is that community fuel reduction projects are often short on funds. There is risk of paradox if it’s expensive to use the tool to make these projects less expensive.
+
+### Free Service
+Once the platform is built, there is little cost to running it - essentially, cloud hosting costs for a small service and datasets. A small grant or fundraising effort could likely pay for this well into the future. If it ran long enough and got enough use to run out of this initial funding, that would be a strong indicator that it was worth investing more effort and budget into.
+
+### Small Community Grants
+Even small funding from the community and local organizations would likely be enough to fund ongoing access to the tool.
+
+Many areas have block funding organizations or support for small local capacity improvement projects. In particular, “Technical Assistance” grants are intended for exactly this - generally minimal effort to apply for because they are small awards intended to help with the tooling and work needed to enable other programs and larger grant applications. So a community might get a TA grant to “bootstrap” a full fuel reduction project. A small one time fee for the service would fit very naturally into this TA structure, and by providing output that would facilitate making that larger fuel reduction project happen, would likely pay for itself.
+
+
+### SaaS 
+It would be natural in some ways to seek startup funding and create a commercial service, likely with a larger or expanding set of features and use cases. Sliding scale pricing and/or non-profit status can help keep the service available to communities, but allow growth funded by commercial users with budget available.
 
 
 # Data and Models
@@ -194,7 +221,7 @@ AI responses may include mistakes.
 
 
 
-# Technical
+# Technical Implementation
 * cloud service - serverless
 * cheap slow cloud storage
 * simple universal formats for interoperability
@@ -211,36 +238,6 @@ AI responses may include mistakes.
   * grant proposal components
   * spreadsheet comparing treatments
  
-# Product Ecology
-## Needed Contacts
-* fuel reduction planners/implementors
-* carbon markets startup/api/modeller
-* biochar kiln producers and practitioners
-* fuel reduction grant experts
-* Carbon Markets
-* Biochar Generation and Use
-* Community Engagement
-* Frontend Engineering
-* Geospatial Modeling (fire and work in particular)
-* Fuel Reduction grant writing and regulations
-* Fire Department interfaces
-* Cultural Burning and Native technologies
-* grant writers and funding hunters
-* fuel reduction and forestry practitioners
-
-## Funding Model
-A critical aspect of this project is that community fuel reduction projects are often short on funds. There is risk of paradox if it’s expensive to use the tool to make your projects less expensive.
-
-### Free Service
-Once the platform is built, there is little cost to running it - essentially, cloud hosting costs for a small service and datasets. A small grant or fundraising effort could likely pay for this well into the future. If it ran long enough and got enough use to run out of this initial funding, that would be a strong indicator that it was worth investing more effort and budget into.
-
-### Small Community Grants
-Many areas have block funding organizations or support for small local capacity improvement projects. In particular, “Technical Assistance” grants are intended for exactly this - generally minimal effort to apply for because they are small awards intended to help with the tooling and work needed to enable other programs and larger grant applications. So a community might get a TA grant to “bootstrap” a full fuel reduction project. A small one time fee for the service would fit very naturally into this TA structure, and by providing output that would facilitate making that larger fuel reduction project happen, would likely pay for itself.
-
-Even small funding from the community and local organizations would likely be enough to fund access to the tool.
-
-### SaaS 
-It would be natural in some ways to seek startup funding and create a commercial service, likely with a larger or expanding set of features and use cases. Sliding scale pricing and/or non-profit status can help keep the service available to communities, but allow growth funded by commercial users with budget available.
 
 # Open Questions
 ## General Product Questions
@@ -356,9 +353,14 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 
 # Reading and Links
 ## Policy and Overview
+* https://research.fs.usda.gov/treesearch/67944 General Technical Report
+* https://click.news.fs.usda.gov/?qs=85917c983f4fbcf6f862300e64941625c60ef8418cb596c6f2ca82e454344b214554ea42c0e42b6fe94e5ac6af1b93700ea637436a69f175835853cf820b6f8b SYCU
 * https://permitsonoma.org/hazfuelsreduction
 * https://research.fs.usda.gov/treesearch/57676
 * https://www.doi.gov/wildlandfire/fuels
+* https://research.fs.usda.gov/psw/projects/alternative-treatments-wildland-urban-interface
+* https://research.fs.usda.gov/treesearch/64794 BioChar primer SYCU
+
 
 ## Quantitative Modeling
 * https://www.mdpi.com/2571-6255/6/3/104  A Quantitative Analysis of Fuel Break Effectiveness Drivers in Southern California National Forests
@@ -367,4 +369,7 @@ Do they describe it verbally as an LLM prompt which we turn into SQL and Geojson
 * https://www.rff.org/news/press-releases/new-study-identifies-costs-of-wildfire-fuel-treatment-in-california/#:~:text=Treating%20areas%20with%20high%20wildfire,and%20San%20Bernardino%20mountain%20ranges. New Study Identifies Costs of Wildfire Fuel Treatment in California
 * https://www.rff.org/publications/working-papers/the-costs-of-achieving-forest-resilience-in-california/  The Costs of Achieving Forest Resilience in California
   
-
+## Companies and Consultancies and Apps and Games
+* https://pyrologix.com/solutions/
+* https://research.fs.usda.gov/rmrs/products/dataandtools/pyrotown-serious-educational-game-integrated-fire-management-students pyrotown
+* 
