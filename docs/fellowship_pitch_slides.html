@@ -29,10 +29,30 @@
         background-size: contain; /* fit entirely within the slide */
         background-repeat: no-repeat;
         background-position: center;
-        color: rgb(0,0,0);
+        color: rgb(107, 255, 102);
         
         text-shadow: 0px 0px 16px rgba(0,0,0,1.0);
       }
+ .top-bottom-slide {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .top-bottom-slide h1 {
+        margin-top: 0;   /* stick to the top */
+      }
+
+      /* push everything after h1 to bottom */
+      .top-bottom-slide h2,
+      .top-bottom-slide h3,
+      .top-bottom-slide p,
+      .top-bottom-slide ul,
+      .top-bottom-slide ol {
+        margin-top: auto;
+      }
+
+      
     </style>
   </head>
   <body>
@@ -46,17 +66,17 @@ background-image: url(biochar_wfr_cover.png)
       
   gateless@gmail.com
 ---
-class: left, bottom     
+class: top-bottom-slide    
 background-image: url(wildfire_graphs.png)
 # Wildfire Fuel Reduction
 $1 of Fuel Removal saves $5-10 in Supression and Damage.
       
-.middle[
+=
 ## Growing Need
 ## Community Projects
-## What to do with the fuel?]
+## What to do with the fuel?
 ---
-class: left, top
+class: top-bottom-slide   
 background-image: url(P3182034.JPG)
 # Biochar Production from Wildfire Fuel
 
