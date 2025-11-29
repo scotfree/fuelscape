@@ -25,40 +25,43 @@ class: top-bottom-slide
 
 Not a comprehensive list but some places to get started and a glimpse at the depth and breadth of modern Open Data.
 
-* types and formats
+* Types and Formats
+* Maps
+* Climate and Environmental Datasets
+* Cloud Data
+
+
+---
+class: top-bottom-slide 
+# Types and Formats
   * tab data and spreadsheets
-    * geospatial data: vectors and rasters
-    * other
+  * geospatial data: vectors and rasters
+  * other
    
 ---
 class: top-bottom-slide 
-# Interesting and Open Data
-* examples and starting points
-  * environmental and societal
-    * https://data.humdata.org
-    * https://jeiloh.github.io/esip_dlc_trusted_data/
-    * Public, open-access data from NASA, NOAA, Copernicus, USGS, and many others.
-    * [NASA](data.nasa.gov) hosts an incredible variety of climate-relevant datasets.
+# environmental and societal
+  * https://data.humdata.org
+  * https://jeiloh.github.io/esip_dlc_trusted_data/
+  * Public, open-access data from NASA, NOAA, Copernicus, USGS, and many others.
+  * [NASA](data.nasa.gov) hosts an incredible variety of climate-relevant datasets.
    
 ---
 class: top-bottom-slide 
-# Interesting and Open Data
-* examples and starting points
-  * maps
-    * [Overture]()
-    * Open Street Map
-      * [Simple Maps](https://www.openstreetmap.org/search?query=rare+earth+mine&zoom=9&minlon=-117.60864257812501&minlat=34.30260622622907&maxlon=-113.40362548828126&maxlat=36.41686211530033#map=17/35.503225/-115.511230)
-      * ([Turbi and Overpass](https://overpass-turbo.eu)
+# Maps and Geospatial Data 
+
+* [Overture]()
+  * Open Street Map
+    * [Simple Maps](https://www.openstreetmap.org/search?query=rare+earth+mine&zoom=9&minlon=-117.60864257812501&minlat=34.30260622622907&maxlon=-113.40362548828126&maxlat=36.41686211530033#map=17/35.503225/-115.511230)
+  * ([Turbi and Overpass](https://overpass-turbo.eu)
     * [OpenTopography](https://portal.opentopography.org/datasets) for landform and elevation data.
 
 ---
 class: top-bottom-slide 
-# Interesting and Open Data
-* examples and starting points
-  * huge and technical
-    * [AWS Open Data](https://registry.opendata.aws)
-    * Planet Labs for non-profits
-    * [NOAA](https://www.noaa.gov/information-technology/open-data-dissemination) uses cloud platforms
+#  huge and technical data in the cloud
+* [AWS Open Data](https://registry.opendata.aws)
+* Planet Labs for non-profits
+* [NOAA](https://www.noaa.gov/information-technology/open-data-dissemination) uses cloud platforms
 
 
 ---
