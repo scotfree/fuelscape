@@ -11,7 +11,8 @@ class: center, middle, theme-dark
   gateless@gmail.com
   
 ---
-class: top-bottom-slide    
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png)    
 # Overview of Session
 
 * Interesting and Open Data
@@ -20,7 +21,8 @@ class: top-bottom-slide
 * Open Horizon
   
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 # Interesting and Open Data
 
 Not a comprehensive list but some places to get started and a glimpse at the depth and breadth of modern Open Data.
@@ -32,14 +34,16 @@ Not a comprehensive list but some places to get started and a glimpse at the dep
 
 
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 # Types and Formats
   * tab data and spreadsheets
   * geospatial data: vectors and rasters
   * other
    
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 # environmental and societal
   * https://data.humdata.org
   * https://jeiloh.github.io/esip_dlc_trusted_data/
@@ -47,7 +51,8 @@ class: top-bottom-slide
   * [NASA](data.nasa.gov) hosts an incredible variety of climate-relevant datasets.
    
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 # Maps and Geospatial Data 
 
 * [Overture]()
@@ -57,7 +62,8 @@ class: top-bottom-slide
     * [OpenTopography](https://portal.opentopography.org/datasets) for landform and elevation data.
 
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 #  huge and technical data in the cloud
 * [AWS Open Data](https://registry.opendata.aws)
 * Planet Labs for non-profits
@@ -65,7 +71,8 @@ class: top-bottom-slide
 
 
 ---
-class: top-bottom-slide    
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png)    
 # Useful and Open Tools
 
 * Free Athena Overture access in AWS/S3
@@ -80,7 +87,8 @@ class: top-bottom-slide
 * Put some data in AWS S3 and be amazed! There's an analysis ecosystem already pointed at it!
   * example: [Overture](https://docs.overturemaps.org/getting-data/) 
 ---
-class: top-bottom-slide    
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png)    
 # Opening PandorAI's box
 * Not talking about: specific ML & ANNs, AI for creative work
   * Try to make tools not answers
@@ -90,7 +98,8 @@ class: top-bottom-slide
 * Use AI to get you over the "energy barrier" for trying new things, not to do the work
 
 ---
-class: top-bottom-slide 
+class: top-bottom-slide
+background-image: url(minkin-multicolor1.png) 
 # Open Horizons and Examples
 
 Just wander:
