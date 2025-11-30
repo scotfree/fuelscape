@@ -22,7 +22,7 @@ background-image: url(minkin-multicolor1.png)
   
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png) 
+background-image: url(vis_bubbles.png) 
 # Interesting and Open Data
 
 Not a comprehensive list but some places to get started and a glimpse at the depth and breadth of modern Open Data.
@@ -35,7 +35,7 @@ Not a comprehensive list but some places to get started and a glimpse at the dep
 
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png) 
+background-image: url(vis_radar.png) 
 # Types and Formats
   * tab data and spreadsheets
   * geospatial data: vectors and rasters
@@ -44,7 +44,7 @@ background-image: url(minkin-multicolor1.png)
    
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png) 
+background-image: url(vis_sankey.png) 
 # environmental and societal
   * https://data.humdata.org
   * https://jeiloh.github.io/esip_dlc_trusted_data/
@@ -53,7 +53,7 @@ background-image: url(minkin-multicolor1.png)
    
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png) 
+background-image: url(vis_states.png) 
 # Maps and Geospatial Data 
 
 * [Overture]()
@@ -64,7 +64,7 @@ background-image: url(minkin-multicolor1.png)
 
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png) 
+background-image: url(vis_streamgraph.png) 
 #  huge and technical data in the cloud
 * [AWS Open Data](https://registry.opendata.aws)
 * Planet Labs for non-profits
@@ -73,7 +73,7 @@ background-image: url(minkin-multicolor1.png)
 
 ---
 class: top-bottom-slide
-background-image: url(minkin-multicolor1.png)    
+background-image: url(vis_vectorfield.png)    
 # Useful and Open Tools
 
 * Free Athena Overture access in AWS/S3
