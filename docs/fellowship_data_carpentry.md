@@ -39,6 +39,7 @@ background-image: url(minkin-multicolor1.png)
 # Types and Formats
   * tab data and spreadsheets
   * geospatial data: vectors and rasters
+    * try to get GeoJSON (vector) and GeoTIFF (raster) when you can
   * other
    
 ---
@@ -101,6 +102,24 @@ background-image: url(minkin-multicolor1.png)
 class: top-bottom-slide
 background-image: url(minkin-multicolor1.png) 
 # Open Horizons and Examples
+
+* A vector data example: 
+  * San Francisco Bay Area cares about Tsunamis!
+  * Get somve vectordata [here](https://maps.conservation.ca.gov/cgs/informationwarehouse/ts_evacuation/)
+  * and look at it with [geojson.io](geojson.io)
+ 
+* A raster data example:
+  * Global "risk" [data](https://data.humdata.org/dataset/econai-conflict-forecast)
+  * [Notebook](https://internal.fireatlas.org:8888/notebooks/fellowship_demo.ipynb) with some basic Geospatial tools in place
+  * Try adding another [data set](https://data.humdata.org/dataset/global-wfp-food-prices/resource/d62af4be-cff6-437b-89a3-67f8fa4c53bf)
+
+* Do some visualization
+  * simple data here
+  * empty notebook
+  * use AI to build your visualization!
+      
+* Do some simple model building
+  * similar 
 
 Just wander:
 
