@@ -1,22 +1,21 @@
 class: top-bottom-slide
 background-image: url(vis_globalvapor.jpg) 
 # Empower Yourself With Data!
-
-* Reading & Writing used to be a Profession. So did Data Science.
-* Data and Data Tools publicly available in astounding ways.
-* Scientists, policymakers, and citizens now use many of the same tools.
+See something cool, learn how much is available and open, share a tip.
+Get in touch!
  
-      
-  Scot Kennedy
-      
-  gateless@gmail.com
+* http://fuelscape.net/fellowship_data_carpentry.html#1
+* https://github.com/scotfree/fuelscape/  
+* gateless@gmail.com
+* https://www.linkedin.com/in/scot-kennedy-7a04265/
+* Scot Kennedy  
   
 ---
 class: top-bottom-slide
 background-image: url(vis_radar.png)    
 # Overview of Session
 
-See something cool, learn how much is available and open, share a tip.
+
 
 * Interesting and Open Data; there is so much access to data.
 * Useful and Open Tools: open source tools are now the best tools.
