@@ -17,10 +17,10 @@ background-image: url(vis_radar.png)
 
 
 
-* Interesting and Open Data; there is so much access to data.
-* Useful and Open Tools: open source tools are now the best tools.
-* Opening PandorAI's Box: using AI well is not trivial.
-* Open Horizon: examples and exercises.
+* Interesting and **Open** Data
+* Useful and **Open** Tools
+* **Opening** PandorAI's Box
+* **Open** Horizon
   
 ---
 class: top-bottom-slide
@@ -38,7 +38,7 @@ Not an exhaustive catalog but some places to get started and a glimpse at the de
 ---
 class: top-bottom-slide
 background-image: url(vis_weathermap.gif) 
-# Types and Formats
+# Types, Formats, and Tips
   * tabular data and spreadsheets
     * CSV is universal and easy - it's just commas (or tabs, or whatever)
     * loads directly into spreadsheets and many other tools
@@ -50,6 +50,7 @@ background-image: url(vis_weathermap.gif)
   * other
     * ZIP and TGZ are just archives, easy to unzip 
     * JSON and YAML are wonderful and common, almost as easy to work with as CSV
+    * "Dataframes" are like spreadsheets with lots of code attached and no built-in interface, widely usable in python and apps.
    
 ---
 class: top-bottom-slide
