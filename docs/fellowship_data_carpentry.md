@@ -18,10 +18,10 @@ background-image: url(vis_radar.png)
 
 See something cool, learn how much is available and open, share a tip.
 
-* Interesting and Open Data
-* Useful and Open Tools
-* Opening PandorAI's Box (sorry)
-* Open Horizon
+* Interesting and Open Data; there is so much access to data.
+* Useful and Open Tools: open source tools are now the best tools.
+* Opening PandorAI's Box: using AI well is not trivial.
+* Open Horizon: examples and exercises.
   
 ---
 class: top-bottom-slide
@@ -64,7 +64,6 @@ background-image: url(vis_sankey.png)
 class: top-bottom-slide
 background-image: url(vis_states.png) 
 # Maps and Geospatial Data 
-
 * [Overture]()
   * Open Street Map
     * [Simple Maps](https://www.openstreetmap.org/search?query=rare+earth+mine&zoom=9&minlon=-117.60864257812501&minlat=34.30260622622907&maxlon=-113.40362548828126&maxlat=36.41686211530033#map=17/35.503225/-115.511230)
@@ -84,7 +83,6 @@ background-image: url(vis_streamgraph.png)
 class: top-bottom-slide
 background-image: url(vis_vectorfield.png)    
 # Useful and Open Tools
-
 * Free Athena Overture access in AWS/S3
 * Notebooks Are An Amazing New Medium
   * Code Notebooks let anyone write and run code in a browser.
@@ -104,6 +102,7 @@ background-image: url(vis_vectorfield.png)
   * ex: spreadsheet linked to map
 * Put some data in AWS S3 and be amazed! There's an analysis ecosystem already pointed at it!
   * example: [Overture](https://docs.overturemaps.org/getting-data/) 
+
 ---
 class: top-bottom-slide
 background-image: url(minkin-multicolor1.png)    
