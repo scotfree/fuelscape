@@ -65,11 +65,11 @@ background-image: url(vis_sankey.png)
 class: top-bottom-slide
 background-image: url(vis_states.png) 
 # Maps and Geospatial Data 
-* [Overture]()
   * Open Street Map
     * [Simple Maps](https://www.openstreetmap.org/search?query=rare+earth+mine&zoom=9&minlon=-117.60864257812501&minlat=34.30260622622907&maxlon=-113.40362548828126&maxlat=36.41686211530033#map=17/35.503225/-115.511230)
-  * ([Turbi and Overpass](https://overpass-turbo.eu)
-    * [OpenTopography](https://portal.opentopography.org/datasets) for landform and elevation data.
+    * [Turbo and Overpass](https://overpass-turbo.eu)
+  * [Overture](https://explore.overturemaps.org/#5.41/40.336/-74.488)
+  * [OpenTopography](https://portal.opentopography.org/datasets) for landform and elevation data.
 
 ---
 class: top-bottom-slide
@@ -84,28 +84,25 @@ background-image: url(vis_streamgraph.png)
 class: top-bottom-slide
 background-image: url(vis_vectorfield.png)    
 # Useful and Open Tools
-* Free Athena Overture access in AWS/S3
-
-* Your SQL skills are still valuable!  
-  * Athena (sql/etc on - often free! - large data in cloud storage)
-  * DuckDB (free multi-tool for small-medium data)
-* Geospatial Tools
-  * [QGIS](https://qgis.org) - Free and popular GIS
-  * geojson.io and felt.com - look at and edit most geo data in a web page
-  * export data from OSM or USGS - run queries and extractions
 * Don't forget Google Spreadsheets & friends - Earth/Maps, etc
   * import CSV directly to process and visualize
-  * ex: spreadsheet linked to map
+  * spreadsheet linked to map
+* Your SQL skills are still valuable!  
+  * Athena (sql/etc on large data in cloud storage -  [Overture](https://docs.overturemaps.org/getting-data/) etc)
+  * DuckDB (free "multi-tool" for small-medium data) - [Home](https://duckdb.org) 
+* Geospatial Tools
+  * [QGIS](https://qgis.org) - Free and popular GIS
+  * [geojson.io](geojson.io) and [Felt](felt.com) - look at and edit most geo data in a web page
+  * export data from OSM or USGS - check your local government! {Humboldt County Web GIS](https://cty-gis-web.co.humboldt.ca.us/HCEGIS3.0/)
 * Put some data in AWS S3 and be amazed! There's an analysis ecosystem already pointed at it!
-  * example: [Overture](https://docs.overturemaps.org/getting-data/) 
 
 ---
 class: top-bottom-slide
 background-image: url(minkin-multicolor1.png) 
 # Notebooks!
 * Code Notebooks let anyone write and run code in a browser.
-* With a narrative direction they are built for storytelling. [Matrix Math](https://nbviewer.org/github/sdrelton/matrix_function_notebooks/blob/master/TheMatrixExponential.ipynb)
-* The notebook model lets you work from examples not write code. 
+* Work from examples not write code. 
+* With a narrative direction, graphics, and typesetting they are built for storytelling. [Matrix Math](https://nbviewer.org/github/sdrelton/matrix_function_notebooks/blob/master/TheMatrixExponential.ipynb)
 * Try them free on [Google Colab](https://colab.research.google.com) (meh) or [AWS](https://studiolab.sagemaker.aws/) (better). 
 * [Geospatial Notebook Collection](https://notebooks.gishub.org) is a great way to learn A LOT, especially about Geospatial data.
 * [More examples](https://gist.github.com/ocoyawale/54d92fd4bf92508a2a6e482b5fa480fd#mathematics)
@@ -115,8 +112,8 @@ class: top-bottom-slide
 background-image: url(minkin-multicolor1.png)    
 # Opening PandorAI's box
 * Not talking about: specific ML & ANNs, AI for creative work
-  * Try to make tools not answers
-    * AI to make tools not analyze data - less waste and hallucination
+* Try to make tools not answers
+* AI to make tools not analyze data - less waste and hallucination
 * Have it Ask You Questions      
 * Cautionary Tale: Board Game Rules
 * Use AI to get you over the "energy barrier" for trying new things, not to do the work
@@ -125,7 +122,6 @@ background-image: url(minkin-multicolor1.png)
 class: top-bottom-slide
 background-image: url(minkin-multicolor1.png) 
 # Open Horizons and Examples
-
 * Just a spreadsheet and CSV
   * [Air/Water quality by region/city](https://www.kaggle.com/datasets/patricklford/water-and-air-quality)
   * Download, unzip, Import to a new Google Spreadsheet
@@ -139,23 +135,22 @@ background-image: url(minkin-multicolor1.png)
 ---
 class: top-bottom-slide
 background-image: url(minkin-multicolor1.png) 
-# Open Horizons and Examples
+# (more) Open Horizons and Examples
 * A vector data example: 
   * San Francisco Bay Area cares about Tsunamis!
   * Get somve vectordata [here](https://maps.conservation.ca.gov/cgs/informationwarehouse/ts_evacuation/)
   * and look at it with [geojson.io](geojson.io)
-* Do some visualization
+* Do some visualization and modelbuilding!
   * simple data here
   * empty notebook
-  * use AI to build your visualization!     
-* Do some simple model building
-  * similar 
+  * use AI to build your visualization!
 
-Just wander:
-* More advanced Climate Data [Colab notebook](https://colab.research.google.com/drive/16wQZgR29lfsV2RhGkuRvLNBc-hqByPVT?authuser=0)
+---
+class: top-bottom-slide
+background-image: url(vis_radar.png)  
+# Just wander around and play with stuff!
+*More advanced Climate Data [Colab notebook](https://colab.research.google.com/drive/16wQZgR29lfsV2RhGkuRvLNBc-hqByPVT?authuser=0)
 * https://developers.google.com/earth-engine/datasets/catalog
-
-Play:
 * https://notebooks.gishub.org (start with "blog")
 * https://felt.com
 * https://www.epa.gov/enviroatlas/enviroatlas-dynamic-data-matrix
