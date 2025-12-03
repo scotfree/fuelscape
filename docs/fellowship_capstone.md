@@ -67,8 +67,11 @@ background-image: url(wesnoth_editmap.png)
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_radar2.png) 
-# High Score!
 
+
+
+
+# High Score!
 * A treatment plan is scored along multiple axes
 * Radar graphs allow comparison
 * Output to Practitioners - or Grant documents, spreadsheets, maps
