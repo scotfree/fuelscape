@@ -92,6 +92,7 @@ background-image: url(minkin-multicolor1.png)
 
 Only Connect.
 
-* Improve accuracy of models
+* Talk with Biochar in Latin America Capstone folks!
+* Improve accuracy of logistical and chemistry models
 * Gather funding and support resources for Communities
-* Make easy and fast Web Game version
+* Make easy and fast "Web Game" version to encourage exploration
