@@ -1,4 +1,14 @@
 class: top-bottom-slide
+background-image: url(candc.png) 
+# Carbon & Cardboard
+
+Podcast: Boardgames as a Medium for Climate Ideas
+
+* Fellowship Topics ALL DAY
+* Just recorded with Daybreak designer
+
+---
+class: top-bottom-slide
 background-image: url(biochar_wfr_cover.png) 
 # Biochar in Wildfire Resilience
 
