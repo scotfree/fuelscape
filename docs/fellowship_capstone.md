@@ -4,7 +4,7 @@ background-image: url(biochar_wfr_cover.png)
 
 Game out different treatment plans in terms of cost, emissions, time, and risk.
 
-* Connunity Wildfire Fuel reduction is important.
+* Community Wildfire Fuel reduction is important.
 * Producing biochar can be a great technique.
 * It can also not be. How can regular folks explore the options?!
        
