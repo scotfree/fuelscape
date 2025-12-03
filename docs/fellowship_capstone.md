@@ -75,3 +75,13 @@ background-image: url(wesnoth_radar2.png)
 * Radar graphs allow comparison
 * Output to Practitioners - or Grant documents, spreadsheets, maps
 
+---
+class: top-bottom-slide
+background-image: url(minkin_multicolor1.png) 
+# Next Steps
+
+Only Connect.
+
+* Improve accuracy of models
+* Gather funding and support resources for Communities
+* Make easy and fast Web Game version
