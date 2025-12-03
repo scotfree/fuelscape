@@ -94,5 +94,6 @@ Only Connect.
 
 * Talk with Biochar in Latin America Capstone folks!
 * Improve accuracy of logistical and chemistry models
+* More user testing
 * Gather funding and support resources for Communities
 * Make easy and fast "Web Game" version to encourage exploration
