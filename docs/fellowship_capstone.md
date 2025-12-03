@@ -1,14 +1,12 @@
 class: top-bottom-slide
-background-image: url(wildfire_kiln.png) 
-# Biochar Prodution in Wildfile Fuel Reduction
+background-image: url(biochar_wfr_cover.png) 
+# Biochar in Wildfire Resilience
 
-Being able to game out different treatment plans in terms of cost, emissions, time, and risk would be cool.
+Game out different treatment plans in terms of cost, emissions, time, and risk.
 
-* Connunity Wildfire Fuel reduction is a thing.
-* Producing biochar can be a great way to do that thing.
-* It can also not. It's hard to know!
-* Biochar production is best close to fuels, water, and road access.
-* Different production methods have different requirements.
+* Connunity Wildfire Fuel reduction is important.
+* Producing biochar can be a great technique.
+* It can also not. How regular folks tell?!
        
   Scot Kennedy
   https://fuelscape.net     
@@ -21,27 +19,25 @@ background-image: url(wesnoth_example1.png)
 
 A hill with some trees on it that we'd like to de-risk.
 
-* Some are close to roads and a creek
-* Some are not
-* parts of the hill are steep.
+* Some fuels are close to roads and a creek
+* Some are not!
+* Parts of the hill are steep.
   
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_example2.png) 
-# Where to place biochar production sites?
+# Biochar processing site placement
 
 Many models consider a treatment area as the sum of its parts with no geometry.
 
-* Biochar production should be close to water to quench (and for safety)
-* If we're going to move the biochar we should be close to a road
+* Biochar production needs water to "quench".
+* Transporting the biochar requires road access - some kilns too.
 * Being closer to trees is more efficient - but not too close!
-* Some production techniques are easier to move around than others.
-
 
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_example3.png) 
-# Some production sites are better than others
+# Location, Lccation, Location
 
 * some fuels may not be suited to biochar production at all
 * use and transport of the biochar effects where it should be produced
@@ -50,20 +46,27 @@ background-image: url(wesnoth_example3.png)
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_console.png) 
-# Scoring is Complex Because It's Local. So let's show a few.
+# Start with Community Data
+
+* Map data from Community or Open Sources
+* Roads, water sources, topography
+* Local requirements
 
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_editmap.png) 
-# Scoring is Complex Because It's Local. So let's show a few.
+# Sketch a Treatment Plan
+
+* Plans can be imported from practitioners
+* Or created using web app tools
 
 
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_radar2.png) 
-# Scoring is Complex Because It's Local. So let's show a few.
+# High Score!
 
-* different communities and treatment areas will have different "best" approaches
-* biochar transport vs use on site
-* carbon market logistics
-* radar charts let us compare treatments for a given configuration of processing sites
+* A treatment plan is scored along multiple axes
+* Radar graphs allow comparison
+* Output to Practitioners - or Grant documents, spreadsheets, maps
+
