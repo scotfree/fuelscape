@@ -77,7 +77,7 @@ background-image: url(wesnoth_radar2.png)
 
 ---
 class: top-bottom-slide
-background-image: url(minkin_multicolor1.png) 
+background-image: url(minkin-multicolor1.png) 
 # Next Steps
 
 Only Connect.
