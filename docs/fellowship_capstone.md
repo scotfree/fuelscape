@@ -49,7 +49,18 @@ background-image: url(wesnoth_example3.png)
 
 ---
 class: top-bottom-slide-nofade
-background-image: url(wesnoth_radar1.png) 
+background-image: url(wesnoth_console.png) 
+# Scoring is Complex Because It's Local. So let's show a few.
+
+---
+class: top-bottom-slide-nofade
+background-image: url(wesnoth_editmap.png) 
+# Scoring is Complex Because It's Local. So let's show a few.
+
+
+---
+class: top-bottom-slide-nofade
+background-image: url(wesnoth_radar2.png) 
 # Scoring is Complex Because It's Local. So let's show a few.
 
 * different communities and treatment areas will have different "best" approaches
