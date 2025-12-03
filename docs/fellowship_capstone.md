@@ -39,10 +39,10 @@ Many models consider a treatment area as the sum of its parts with no geometry.
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_example3.png) 
-# Location, Lccation, Location
+# Location, Location, Location
 
 * some fuels may not be suited to biochar production at all
-* use and transport of the biochar effects where it should be produced
+* use and transport of the biochar affects where it should be produced
 * different areas can have different best answers
 
 ---
@@ -51,8 +51,8 @@ background-image: url(wesnoth_console.png)
 # Start with Community Data
 
 * Map data from Community or Open Sources
-* Roads, water sources, topography
-* Local requirements
+* Roads, Water Sources, Topography, Buildings
+* Local Requirements
 
 ---
 class: top-bottom-slide-nofade
@@ -61,13 +61,13 @@ background-image: url(wesnoth_editmap.png)
 
 * Plans can be imported from practitioners
 * Or created using web app tools
-* Should be light and iterative but precise and open
+* Should be light and iterative but Precise and Open
 
 
 ---
 class: top-bottom-slide-nofade
 background-image: url(wesnoth_radar2.png) 
-
+# $
 
 
 
