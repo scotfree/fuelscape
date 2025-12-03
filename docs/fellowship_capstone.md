@@ -47,3 +47,12 @@ background-image: url(wesnoth_example3.png)
 * use and transport of the biochar effects where it should be produced
 * different areas can have different best answers
 
+---
+class: top-bottom-slide-nofade
+background-image: url(wesnoth_radar1.png) 
+# Scoring is Complex Because It's Local. So let's show a few.
+
+* different communities and treatment areas will have different "best" approaches
+* biochar transport vs use on site
+* carbon market logistics
+* radar charts let us compare treatments for a given configuration of processing sites
