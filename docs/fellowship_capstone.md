@@ -6,10 +6,12 @@ Game out different treatment plans in terms of cost, emissions, time, and risk.
 
 * Connunity Wildfire Fuel reduction is important.
 * Producing biochar can be a great technique.
-* It can also not. How regular folks tell?!
+* It can also not be. How can regular folks explore the options?!
        
   Scot Kennedy
+
   https://fuelscape.net     
+
   gateless@gmail.com
   
 ---
@@ -44,7 +46,7 @@ background-image: url(wesnoth_example3.png)
 * different areas can have different best answers
 
 ---
-class: top-bottom-slide-nofade
+class: top-bottom-slide
 background-image: url(wesnoth_console.png) 
 # Start with Community Data
 
@@ -59,6 +61,7 @@ background-image: url(wesnoth_editmap.png)
 
 * Plans can be imported from practitioners
 * Or created using web app tools
+* Should be light and iterative but precise and open
 
 
 ---
